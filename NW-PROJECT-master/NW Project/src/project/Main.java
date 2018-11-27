@@ -30,9 +30,6 @@ public class Main extends Knowledge{
 		case 1:
 			Knowledge.perimeterArea();//find perimeter and area of a rectangle
 			break; // break statement halts a loop and exits it
-		case 2:
-			Car.age();//tells you the age of your car also a method call. No argument within parentheses but that is where it would be
-			break;
 		case 3:
 			Strings.stringStuff();//states the string length, and compares to a predetermined string for boolean true false values
 			break;
@@ -40,7 +37,21 @@ public class Main extends Knowledge{
 			Knowledge.dice();
 			break;
 		case 5: 
-			Car.myCar("black", "Kia Optima"); //method is Car.myCar and arguments are blue and ford
+			Car myCar= new Car("black", "Kia Optima", 2011);
+				    System.out.println("My car is a " + myCar.toString()); 
+				    //method is Car.myCar and arguments are kia optima
+				    	System.out.println("year of your car:");
+				    	int year = scan.nextInt();
+				    	
+				    	System.out.println("Enter model of car:");
+				    	String model = scan.nextLine();
+				    	
+				    	System.out.println("Enter make of car:");
+				    	String make = scan.nextLine();
+				    	
+				        Car yourCar = new Car(make, model, year);
+				    	System.out.println("Your car is "+ yourCar.toString() + " years old");
+				    	
 			break;
 		case 6:
 			Loops.loop(); // for loops while loops do while loops

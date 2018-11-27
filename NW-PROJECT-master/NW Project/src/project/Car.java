@@ -9,30 +9,8 @@ import java.util.Scanner;
 	    private boolean bluetooth;
 	    private boolean sunroof;
 	    
-	    public static void age() {
-	    	Scanner scanYearCurrent = new Scanner(System.in);
-	    	System.out.println("Enter current year:");
-	    	int currentyear = scanYearCurrent.nextInt();
-	    	
-	    	System.out.println("Enter model year of car:");
-	    	Scanner scanModelYear = new Scanner(System.in);
-	    	int modelyear = scanModelYear.nextInt();
-	    	int age =currentyear - modelyear;
-	    	scanYearCurrent.close();
-	    	scanModelYear.close();
-	    	
-	    	Scanner sc = new Scanner(System.in);
-	        make = sc.next();
-	    	System.out.println("Your car is " + age + " years old");
-	    }
 	    
-	    public static String myCar(String x, String y) {//method is myCar parameters are String x and String y
-		    Car myCar = new Car();
-		    String x1 = "black";
-		    String y1 = "kia optima";
-		    System.out.println("My car is a " + x + " " + y + "."); 
-		    return null;
-		  }
+	    
 	    Car(){
 	    	color = "silver";
 	    	make = "ford";
@@ -42,8 +20,8 @@ import java.util.Scanner;
 	    }
 	    
 	     Car (String color, String make, int year){//argument is all the stuff in parentheses
-	    	this.color = color;
-	    	this.make = make;
+	    	Car.color = color;
+	    	Car.make = make;
 	    	this.year = year;
 	    	this.bluetooth = false;
 	    	this.sunroof = true;
